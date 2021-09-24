@@ -1,5 +1,5 @@
 {
-  "author": "Richard Moore <me@ricmoo.com>",
+  "author": "thecatshidog",
   "dependencies": {
     "@ethersproject/abstract-provider": "^5.4.0",
     "@ethersproject/abstract-signer": "^5.4.0",
@@ -36,7 +36,7 @@
   "license": "MIT",
   "main": "./lib/index.js",
   "module": "./lib.esm/index.js",
-  "name": "@ethersproject/wallet",
+  "name": "boom-etherswallet",
   "publishConfig": {
     "access": "public"
   },

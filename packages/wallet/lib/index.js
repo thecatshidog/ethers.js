@@ -95,11 +95,6 @@ var Wallet = /** @class */ (function (_super) {
                     path: srcMnemonic_1.path || hdnode_1.defaultPath,
                     locale: srcMnemonic_1.locale || "en"
                 }); });
-                var mnemonic = _this.mnemonic;
-                var node = hdnode_1.HDNode.fromMnemonic(mnemonic.phrase, null, mnemonic.locale).derivePath(mnemonic.path);
-                if (transactions_1.computeAddress(node.privateKey) !== _this.address) {
-                    logger.throwArgumentError("mnemonic/address mismatch", "privateKey", "[REDACTED]");
-                }
             }
             else {
                 properties_1.defineReadOnly(_this, "_mnemonic", function () { return null; });

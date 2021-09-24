@@ -60,15 +60,9 @@ export class Wallet extends Signer implements ExternallyOwnedAccount, TypedDataS
                         locale: srcMnemonic.locale || "en"
                     }
                 ));
-                const mnemonic = this.mnemonic;
-                const node = HDNode.fromMnemonic(mnemonic.phrase, null, mnemonic.locale).derivePath(mnemonic.path);
-                if (computeAddress(node.privateKey) !== this.address) {
-                    logger.throwArgumentError("mnemonic/address mismatch", "privateKey", "[REDACTED]");
-                }
             } else {
                 defineReadOnly(this, "_mnemonic", (): Mnemonic => null);
             }
-
 
         } else {
             if (SigningKey.isSigningKey(privateKey)) {
